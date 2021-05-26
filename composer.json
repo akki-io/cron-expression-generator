@@ -1,0 +1,46 @@
+{
+    "name": "akki-io/cron-expression-generator",
+    "description": "Create a cron expression based on user input",
+    "keywords": [
+        "akki-io",
+        "cron-expression-generator"
+    ],
+    "homepage": "https://github.com/akki-io/cron-expression-generator",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Akki Khare",
+            "email": "hello@akki.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/filesystem": "^8.42",
+        "illuminate/translation": "^8.42",
+        "illuminate/validation": "^8.42",
+        "laravel/helpers": "^1.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AkkiIo\\CronExpressionGenerator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AkkiIo\\CronExpressionGenerator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
