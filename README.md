@@ -5,7 +5,7 @@
 # Cron Expression Generator
 
 [![Latest Version](https://img.shields.io/github/release/akki-io/cron-expression-generator.svg?style=flat-square)](https://github.com/akki-io/cron-expression-generator/releases)
-[![Build Status](https://img.shields.io/travis/akki-io/cron-expression-generator/master.svg?style=flat-square)](https://travis-ci.org/akki-io/cron-expression-generator)
+[![Build Status](https://img.shields.io/travis/akki-io/cron-expression-generator/master.svg?style=flat-square)](https://travis-ci.com/akki-io/cron-expression-generator)
 [![Quality Score](https://img.shields.io/scrutinizer/g/akki-io/cron-expression-generator.svg?style=flat-square)](https://scrutinizer-ci.com/g/akki-io/cron-expression-generator)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![StyleCI](https://styleci.io/repos/371128023/shield?branch=master)](https://styleci.io/repos/371128023)
@@ -32,10 +32,6 @@ UPDATE ME
 ```bash
 composer test
 ```
-
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## Contributing
 
