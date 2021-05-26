@@ -35,13 +35,13 @@ class ParseInput
             $validator = (new ValidatorFactory())->make($this->options, $this->rules($min, $max));
 
             if ($validator->fails()) {
-                throw new InvalidArgumentException("UNSUPPORTED_OPTIONS");
+                throw new InvalidArgumentException('UNSUPPORTED_OPTIONS');
             }
         }
     }
 
     /**
-     * Get the validation rules
+     * Get the validation rules.
      *
      * @param int $min
      * @param int $max
@@ -61,7 +61,7 @@ class ParseInput
             'every' => [
                 'required_if:type,EVERY',
                 'required_if:type,STEP',
-                'between:'.($min+1).','.($max),
+                'between:'.($min + 1).','.($max),
             ],
             'list' => [
                 'required_if:type,LIST',
@@ -69,18 +69,18 @@ class ParseInput
             ],
             'list.*' => [
                 'required_if:type,LIST',
-                'between:'.($min).','.($max-1),
+                'between:'.($min).','.($max - 1),
             ],
             'start' => [
                 'required_if:type,RANGE',
                 'required_if:type,STEP',
-                'between:'.($min).','.($max-1),
+                'between:'.($min).','.($max - 1),
             ],
             'end' => [
                 'required_if:type,RANGE',
                 'required_if:type,STEP',
-                'between:'.($min).','.($max-1),
-                'gte:start'
+                'between:'.($min).','.($max - 1),
+                'gte:start',
             ],
         ];
     }

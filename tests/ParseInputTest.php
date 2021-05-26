@@ -23,7 +23,7 @@ class ParseInputTest extends TestCase
     {
         $expression = (new ParseInput([
             'type' => 'ONCE',
-            'at' => '35'
+            'at' => '35',
         ], 0, 59))->generate();
 
         $this->assertEquals('35', $expression);
@@ -34,7 +34,7 @@ class ParseInputTest extends TestCase
     {
         $expression = (new ParseInput([
             'type' => 'EVERY',
-            'every' => '5'
+            'every' => '5',
         ], 0, 59))->generate();
 
         $this->assertEquals('*/5', $expression);
@@ -45,7 +45,7 @@ class ParseInputTest extends TestCase
     {
         $expression = (new ParseInput([
             'type' => 'LIST',
-            'list' => [0,1,2,22,33,59],
+            'list' => [0, 1, 2, 22, 33, 59],
         ], 0, 59))->generate();
 
         $this->assertEquals('0,1,2,22,33,59', $expression);

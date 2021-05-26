@@ -23,7 +23,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
         $options = [
             'minute' => [
                 'type' => 'ONCE',
-                'at' => 0
+                'at' => 0,
             ],
             'hour' => [
                 'type' => 'EVERY',
@@ -42,7 +42,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
         $options = [
             'minute' => [
                 'type' => 'ONCE',
-                'at' => 15
+                'at' => 15,
             ],
             'hour' => [
                 'type' => 'ONCE',
@@ -61,7 +61,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
         $options = [
             'minute' => [
                 'type' => 'ONCE',
-                'at' => 15
+                'at' => 15,
             ],
             'hour' => [
                 'type' => 'ONCE',
@@ -71,7 +71,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
                 'type' => 'RANGE',
                 'start' => 1,
                 'end' => 5,
-            ]
+            ],
         ];
 
         $cron = (new CronExpressionGenerator($options))->generate();
@@ -85,7 +85,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
         $options = [
             'minute' => [
                 'type' => 'ONCE',
-                'at' => 15
+                'at' => 15,
             ],
             'hour' => [
                 'type' => 'ONCE',
@@ -94,7 +94,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
             'day_month' => [
                 'type' => 'ONCE',
                 'at' => 22,
-            ]
+            ],
         ];
 
         $cron = (new CronExpressionGenerator($options))->generate();
@@ -108,7 +108,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
         $options = [
             'minute' => [
                 'type' => 'ONCE',
-                'at' => 15
+                'at' => 15,
             ],
             'hour' => [
                 'type' => 'ONCE',
@@ -117,7 +117,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
             'day_week' => [
                 'type' => 'ONCE',
                 'at' => 0,
-            ]
+            ],
         ];
 
         $cron = (new CronExpressionGenerator($options))->generate();
