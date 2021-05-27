@@ -2,3 +2,6 @@ vendor
 .idea
 .phpunit.result.cache
 composer.lock
+build
+docs
+coverage

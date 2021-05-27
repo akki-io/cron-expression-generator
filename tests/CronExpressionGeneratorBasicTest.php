@@ -103,7 +103,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
     }
 
     /** @test */
-    public function it_should_return_cron_for_every_month_at_specific_day_hour_minute()
+    public function it_should_return_cron_for_every_sunday_at_specific_day_hour_minute()
     {
         $options = [
             'minute' => [
@@ -123,5 +123,32 @@ class CronExpressionGeneratorBasicTest extends TestCase
         $cron = (new CronExpressionGenerator($options))->generate();
 
         $this->assertEquals('15 10 * * 0', $cron);
+    }
+
+    /** @test */
+    public function it_should_return_cron_for_every_year_at_specific_month_date_hour_minute()
+    {
+        $options = [
+            'minute' => [
+                'type' => 'ONCE',
+                'at' => 15,
+            ],
+            'hour' => [
+                'type' => 'ONCE',
+                'at' => 10,
+            ],
+            'day_month' => [
+                'type' => 'ONCE',
+                'at' => 22,
+            ],
+            'month' => [
+                'type' => 'ONCE',
+                'at' => 10,
+            ],
+        ];
+
+        $cron = (new CronExpressionGenerator($options))->generate();
+
+        $this->assertEquals('15 10 22 10 *', $cron);
     }
 }
