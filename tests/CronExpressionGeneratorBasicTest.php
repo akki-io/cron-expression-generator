@@ -131,7 +131,7 @@ class CronExpressionGeneratorBasicTest extends TestCase
         $options = [
             'minute' => [
                 'type' => 'ONCE',
-                'at' => 15
+                'at' => 15,
             ],
             'hour' => [
                 'type' => 'ONCE',
